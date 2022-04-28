@@ -30,8 +30,8 @@ const routes = [
     children: [
       {
         path: '/',
-        name: 'parkInfo',
-        component: () => import(/* webpackChunkName: "about" */ '../components/indexmain/InterfaceMain.vue'),
+        name: 'welcomePic',
+        component: () => import(/* webpackChunkName: "about" */ '../components/indexmain/WelcomePic.vue'),
       },
       {
         path: '/parkInfo',
