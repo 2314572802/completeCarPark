@@ -12,8 +12,8 @@
       <el-button
         type="primary"
         icon="el-icon-search"
-        size="medium"
-        @click="conditionQuery"
+        size="medium" 
+        @click="conditionQuery" 
         >搜索</el-button
       >
       <!-- 新增 -->
