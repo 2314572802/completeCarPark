@@ -200,7 +200,19 @@
 <script>
 export default {
   data() {
+    var validateNumber = (rule, value, callback) => {
+      console.log("value:" + value);
+      if (!/^[+]{0,1}(\d+)$|^[+]{0,1}(\d+\.\d+)$/.test(value)) {
+        callback(new Error("请输入数字值"));
+      } else {
+        callback();
+      }
+    };
     return {
+      //校验规则
+      rules: {
+        carMsgId: [{ validator: validateNumber, trigger: "blur" }],
+      },
       //查询
       select: "",
       //表单数据

@@ -1,4 +1,5 @@
 <template>
+<!-- <div class="background_style"> -->
   <div id="app">
     <img :src="logo" />
     <el-row :gutter="20">
@@ -23,6 +24,7 @@
       </el-col>
     </el-row>
   </div>
+<!-- </div> -->
 </template>
 
 <script>
@@ -73,4 +75,12 @@ export default {
   color: #2c3e50;
   margin-top: 10px;
 }
+/* .background_style{
+width:100%;
+height:100%;
+position:fixed;
+background-size:100% 100%;
+background-repeat: no-repeat;
+background-image: url("../assets/登录背景.png");
+} */
 </style>
