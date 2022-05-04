@@ -321,7 +321,7 @@ export default {
             type: "success",
           });
           this.insert = false;
-          this.freeCarMsg();
+          this.freeCarMsg(this.pageCode, this.pageSize);
         } else if (response.data === "reParkId") {
           this.$message.error("新增车辆时所选车位已有车！");
         } else if (response.data === "errorParkType") {
@@ -356,7 +356,7 @@ export default {
             type: "success",
           });
           this.update = false;
-          this.freeCarMsg();
+          this.freeCarMsg(this.pageCode, this.pageSize);
         } else {
           this.$message.error("出库失败！请重试！");
         }
@@ -383,7 +383,7 @@ export default {
                 message: "删除成功！",
                 type: "success",
               });
-              this.freeCarMsg();
+              this.freeCarMsg(this.pageCode, this.pageSize);
             } else {
               this.$message.error("删除失败！");
             }

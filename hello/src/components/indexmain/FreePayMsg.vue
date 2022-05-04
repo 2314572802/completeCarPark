@@ -223,7 +223,7 @@ export default {
             type: "success",
           });
           this.insert = false;
-          this.freePayMsg();
+          this.freePayMsg(this.pageCode, this.pageSize);
         } else if (response.data === "errorCarId") {
           this.$message.error("请输入正确的自由车辆编号！");
         } else if (response.data === "error") {

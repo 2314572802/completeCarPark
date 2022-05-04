@@ -283,7 +283,7 @@ export default {
                 type: "success",
               });
               this.insert = false;
-              this.parkInfo();
+              this.parkInfo(this.pageCode, this.pageSize);
             } else {
               this.$message.error("新增失败！请重试！");
             }
@@ -321,7 +321,7 @@ export default {
                 type: "success",
               });
               this.update = false;
-              this.parkInfo();
+              this.parkInfo(this.pageCode, this.pageSize);
             } else {
               this.$message.error("修改失败！请重试！");
             }
@@ -364,7 +364,7 @@ export default {
                   message: "删除成功！",
                   type: "success",
                 });
-                this.parkInfo();
+                this.parkInfo(this.pageCode, this.pageSize);
               } else {
                 this.$message.error("删除失败！");
               }

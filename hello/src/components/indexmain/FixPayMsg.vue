@@ -306,7 +306,7 @@ export default {
             type: "success",
           });
           this.insert = false;
-          this.fixPayMsg();
+          this.fixPayMsg(this.pageCode, this.pageSize);
         } else if (response.data === "errorParkType") {
           this.$message.error("请输入固定车位的车辆编号！");
         } else if (response.data === "errorCarNum") {
@@ -343,7 +343,7 @@ export default {
             type: "success",
           });
           this.update = false;
-          this.fixPayMsg();
+          this.fixPayMsg(this.pageCode, this.pageSize);
         } else {
           this.$message.error("收费方式修改失败！请重试！");
         }
@@ -370,7 +370,7 @@ export default {
                 message: "删除成功！",
                 type: "success",
               });
-              this.fixPayMsg();
+              this.fixPayMsg(this.pageCode, this.pageSize);
             } else {
               this.$message.error("删除失败！");
             }
